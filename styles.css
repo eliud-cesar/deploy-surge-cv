@@ -1,0 +1,87 @@
+/* ESTILOS NORMALIZE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COLOR DE FONDO DEL BODY */
+body {
+    background-color: #006DC6;
+}
+
+/* ESTILOS DEL BOTON PARA VER EL CV */
+.container-de-cv {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.cv-de-vista {
+    font-weight: 800;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+/* ---ESTILOS DE LA VISUALIZACION DEL CV EN MOVIL--- */
+/* CV OCULTO */
+.container-img {
+    display: none;
+}
+/* CV VISIBLE, ESTO SOLO CUANDO TENGA LA CLASE ACTIVE */
+.container-img.active {
+    z-index: 40;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: #53575A;
+}
+/* ESTILOS AL CV EN SI */
+img {
+    border: 1px solid #DFE0E0;
+    width: 90%;
+}
+/* POSICION DEL CONTAINER DEL BOTON DE CERRAR LA VISTA DEL CV */
+.button {
+    top: 5%;
+    right: 7%;
+    position: absolute;
+}
+/* ESTILOS DEL INPUT, DE TIPO SUBMIT, BOTONES */
+input {
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #FAFDFF;
+    cursor: pointer;
+}
+
+
+
+/* ---------ESTILOS EN DESKTOP--------- */
+@media screen and (min-width: 1024px) {
+    /* TAMAÑO EN DESKTOP */
+    img {
+        width: 30%;
+    }
+    .button {
+        right: 3%;
+        top: 5%;
+    }
+    input {
+        border-radius: .2rem;
+    }
+    
+    /* COLORES EN HOVER, SOLO EN DESKTOP */
+    /* BOTON DE CERRAR LA VISTA DEL CV */
+    .button > input:hover {
+        background-color: #5BC6FC;
+    }
+    /* BOTON DE ABRIR LA VISTA DEL CV */
+    input:hover {
+        background-color: grey;
+        color: white;
+    }
+
+}
